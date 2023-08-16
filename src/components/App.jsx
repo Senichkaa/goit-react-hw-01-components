@@ -3,6 +3,7 @@ import user from '../data/user.json';
 export const App = () => {
   return (
     <div>
+      <h2 className="task-title">Task 1</h2>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -10,7 +11,7 @@ export const App = () => {
         avatar={user.avatar}
         stats={user.stats}
       />
-
+      <h2 className="task-title">Task 2</h2>
       {/* React homework template */}
     </div>
   );

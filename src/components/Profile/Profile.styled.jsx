@@ -66,6 +66,7 @@ export const StatItem = styled.li`
   padding: 15px 25px;
 
   border: 1px solid #464545;
+  border-bottom: none;
 `;
 
 export const StatLabel = styled.span`
