@@ -1,5 +1,7 @@
 import { Profile } from '../components/Profile/Profile';
+import { Statistics } from './Statistics/Statistics';
 import user from '../data/user.json';
+import data from '../data/data.json';
 export const App = () => {
   return (
     <div>
@@ -12,6 +14,7 @@ export const App = () => {
         stats={user.stats}
       />
       <h2 className="task-title">Task 2</h2>
+      <Statistics title="Upload" stats={data} />
       {/* React homework template */}
     </div>
   );
