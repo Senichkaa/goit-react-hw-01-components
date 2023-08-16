@@ -1,32 +1,44 @@
+import {
+  ProfileMarkup,
+  Description,
+  Avatar,
+  Username,
+  Tag,
+  Location,
+  Statistics,
+  StatItem,
+  StatLabel,
+  StatQuantity,
+} from './Profile.styled';
 import PropTypes from 'prop-types';
 
-export const Profile = props => {
-  const { username, tag, location, avatar, stats } = props;
+export const Profile = ({ username, tag, location, avatar, stats }) => {
+  //   const { username, tag, location, avatar, stats } = props;
 
   return (
-    <div class="profile">
-      <div class="description">
-        <img src={avatar} alt="User avatar" class="avatar" />
-        <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
-      </div>
+    <ProfileMarkup>
+      <Description>
+        <Avatar src={avatar} alt="User avatar" />
+        <Username>{username}</Username>
+        <Tag>@{tag}</Tag>
+        <Location>{location}</Location>
+      </Description>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <Statistics>
+        <StatItem>
+          <StatLabel>Followers</StatLabel>
+          <StatQuantity>{stats.followers}</StatQuantity>
+        </StatItem>
+        <StatItem>
+          <StatLabel>Views</StatLabel>
+          <StatQuantity>{stats.views}</StatQuantity>
+        </StatItem>
+        <StatItem>
+          <StatLabel>Likes</StatLabel>
+          <StatQuantity>{stats.likes}</StatQuantity>
+        </StatItem>
+      </Statistics>
+    </ProfileMarkup>
   );
 };
 
