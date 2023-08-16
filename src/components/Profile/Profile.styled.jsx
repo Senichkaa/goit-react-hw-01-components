@@ -43,9 +43,6 @@ export const Location = styled.p`
   line-height: 1.11;
   margin-bottom: 0px;
 `;
-// test test
-// test test
-// test test
 
 export const Statistics = styled.ul`
   padding: 0;

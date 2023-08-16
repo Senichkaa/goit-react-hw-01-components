@@ -14,7 +14,8 @@ export const App = () => {
         stats={user.stats}
       />
       <h2 className="task-title">Task 2</h2>
-      <Statistics title="Upload" stats={data} />
+      <Statistics title="Upload stats" stats={data} />
+      <h2 className="task-title">Task 3</h2>
       {/* React homework template */}
     </div>
   );
