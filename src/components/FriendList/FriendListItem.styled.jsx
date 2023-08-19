@@ -4,7 +4,9 @@ export const StatusSpan = styled.span`
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: ${elem => elem.color};
+  background-color: ${props => {
+    return props.color;
+  }};
   text-align: center;
 `;
 
